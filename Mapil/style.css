@@ -1,0 +1,285 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+:root {
+    --color-bg: #ffffff;
+    --color-text-primary: #111827;
+    --color-text-secondary: #6b7280;
+    --color-primary: #111827;
+    --color-button-bg: #111827;
+    --color-button-text: #ffffff;
+
+    --radius: 0.75rem;
+    --shadow-light: 0 4px 6px rgb(0 0 0 / 0.05);
+    --spacing-vertical: 4rem;
+    --max-width: 1200px;
+    --transition-fast: 0.3s ease;
+}
+
+*{
+  margin: 0;
+  padding:0;
+  box-sizing: border-box;
+}
+.background
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: var(--color-bg);
+    font-family: 'Poppins', sans-serif;
+    color: var(--color-text-secondary);
+    line-height: 1.6;
+    font-size: 18px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+#prayer-times-heading {
+    text-align: center;
+    margin-bottom: 1rem;
+    color: #111827;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 8px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+thead tr {
+    background-color: #f2f2f2;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    background: var(--color-bg);
+    box-shadow: var(--shadow-light);
+    z-index: 100;
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: 700;
+    font-size: 1.25rem;
+    color: var(--color-text-primary);
+}
+
+header nav {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+header nav a {
+    color: var(--color-text-secondary);
+    font-weight: 600;
+    transition: color var(--transition-fast);
+}
+
+header nav a:hover,
+header nav a:focus {
+    color: var(--color-primary);
+}
+
+.container {
+    max-width: var(--max-width);
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    width: 100%;
+}
+
+main {
+    padding-top: var(--spacing-vertical);
+    padding-bottom: var(--spacing-vertical);
+}
+
+.hero {
+    text-align: center;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    color: var(--color-text-primary);
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    line-height: 1.1;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2.5rem;
+    color: var(--color-text-secondary);
+}
+
+.btn-primary {
+    background-color: var(--color-button-bg);
+    color: var(--color-button-text);
+    font-weight: 700;
+    padding: 1rem 2.25rem;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-light);
+    border: none;
+    cursor: pointer;
+    font-size: 1.125rem;
+    transition: transform var(--transition-fast), background-color var(--transition-fast);
+    display: inline-block;
+    text-align: center;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+    background-color: #333;
+    transform: scale(1.05);
+    outline-offset: 4px;
+    outline: 2px solid #111827;
+}
+
+section.features {
+    margin-top: var(--spacing-vertical);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    color: var(--color-text-primary);
+}
+
+.card {
+    background: #f9fafb;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-light);
+    padding: 1.75rem 1.5rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: box-shadow var(--transition-fast), transform var(--transition-fast);
+}
+
+.card:hover,
+.card:focus-within {
+    box-shadow: 0 10px 15px rgb(0 0 0 / 0.1);
+    transform: translateY(-5px);
+    cursor: pointer;
+}
+
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: var(--radius);
+    margin-bottom: 1rem;
+    box-shadow: var(--shadow-light);
+
+}
+
+.card h3 {
+    margin: 1rem 0 0.5rem;
+    font-weight: 700;
+    font-size: 1.25rem;
+    color: var(--color-primary);
+}
+
+.card p {
+    font-weight: 400;
+    color: var(--color-text-secondary);
+    font-size: 1rem;
+    margin: 0;
+}
+
+section.about {
+    margin-top: var(--spacing-vertical);
+    max-width: 720px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    color: var(--color-text-primary);
+}
+
+section.about h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+section.about p {
+    font-size: 1.125rem;
+    line-height: 1.5;
+    color: var(--color-text-secondary);
+}
+section.prayer-times {
+    margin-top: var(--spacing-vertical);
+    max-width: 720px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    color: var(--color-text-primary);
+}
+
+section.prayer-times {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+section.prayer-times {
+    font-size: 1.125rem;
+    line-height: 1.5;
+    color: var(--color-text-secondary);
+}
+
+footer {
+    margin-top: var(--spacing-vertical);
+    padding: 2rem;
+    background: #f9fafb;
+    text-align: center;
+    font-size: 0.875rem;
+    color: var(--color-text-secondary);
+
+}
+
+@media (max-width: 600px) {
+    header {
+        font-size: 1rem;
+        padding: 1rem;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .btn-primary {
+        padding: 0.75rem 1.5rem;
+        font-size: 
+
+    }
+
+    .prayer-times {
+       style="font-size:1.25rem; color:#ffffff; font-weight:600;
+    }
+
+
+  }
